@@ -18,7 +18,7 @@ def validation(X,y, features, clf, lossfunction):
     totaltest = []
     kf = KFold(5)
     for train_index, test_index in kf.split(X):
-        X_train, X_test = X.ix[train_index,:][features], X.ix[test_index,:][features]
+        X_train, X_test = X.iloc[train_index,:][features], X.iloc[test_index,:][features]
         y_train, y_test = y[train_index], y[test_index]
         #clf.fit(X_train, y_train, eval_set = [(X_train, y_train), (X_test, y_test)], eval_metric='logloss', verbose=False,early_stopping_rounds=50)
         clf.fit(X_train, y_train)
