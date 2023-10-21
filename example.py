@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.model_selection import KFold
 
 def prepareData():
-    df = pd.read_csv('clean_train.csv')
+    df = pd.read_csv('example/titanicclean_train.csv')
     Title = list(np.unique(df.Title))
     df.Title.replace(Title, list(np.arange(len(Title))), inplace=True)
     return df
