@@ -52,7 +52,7 @@ def main():
     sf.GenerateCol()
     sf.SetSample(0.5, samplemode = 0, samplestate = 0)
     sf.AddPotentialFeatures(['Pclass'])
-    sf.clf = LogisticRegression()
+    sf.clf = LogisticRegression(max_iter = 1000)
     sf.SetLogFile('record2.log')
 #    sf.SetFeaturesLimit(5)
     sf.SetTimeLimit(0.2)
