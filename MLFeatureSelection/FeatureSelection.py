@@ -33,6 +33,7 @@ def _reachlimit(func):
                                                                                    c._score,
                                                                                    c._FeaturesQuanLimitation,
                                                                                    c._TemplUsedFeatures))
+            print(f"Score: {c._score}")
             sys.exit()
         return temp
     return wrapper
@@ -141,6 +142,7 @@ class _LRS_SA_RGSS_combination(object):
         print('{0}\nbest score:{1}\nbest features combination: {2}'.format('*-*' * 50,
                                                                            self.bestscore,
                                                                            self._bestfeature))
+        print(f"Score: {self.bestscore}")
 
     def _validation(self,
                     selectcol,
