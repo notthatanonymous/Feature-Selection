@@ -57,7 +57,6 @@ def main():
 #    sf.SetFeaturesLimit(5)
     sf.SetTimeLimit(0.2)
     sf.run(validation)
-    print(sf._bestscore)
 
 if __name__ == "__main__":
     main()
